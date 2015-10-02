@@ -2,7 +2,10 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <a class="site-title" href="{{ site.baseurl }}/">
+      <img class="header_logo" src="{{site.baseurl}}/images/event_maker_logo.png">
+      {{ site.title }}
+    </a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -14,7 +17,8 @@
       </a>
 
       <div class="trigger">
-        {% for page in site.pages %}
+        {% assign sorted_pages = site.pages | sort:"order" %}
+        {% for page in sorted_pages %}
           {% if page.title %}
           <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
           {% endif %}
