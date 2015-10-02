@@ -8,6 +8,6 @@ baseurl: "/eventmaker" # the subpath of your site, e.g. /blog/
 url: "http://pocket.software" # the base hostname & protocol for your site
 twitter_username: jjnevis
 github_username:  jjnevis
-
+permalink: pretty
 # Build settings
 markdown: kramdown
